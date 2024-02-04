@@ -31,8 +31,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.window.Dialog
-import androidx.compose.ui.window.DialogProperties
 import com.example.customalert.ui.theme.AlertCyan
 
 
@@ -185,44 +183,5 @@ fun <T> CustomAlert(
                 showAlert.value = false
             }
         }
-    }
-}
-
-@Composable
-fun <T> CustomAlertDialog(
-    title: String,
-    message: String,
-    actionText: String,
-    presenting: T?,
-    showAlert: MutableState<Boolean>,
-    action: (T) -> Unit
-) {
-    Dialog(
-        onDismissRequest = { showAlert.value = false },
-        properties = DialogProperties(usePlatformDefaultWidth = false)
-    ) {
-        CustomAlert(
-            title, message, actionText, presenting, showAlert,
-            actionWithValue = action, action = null
-        )
-    }
-}
-
-@Composable
-fun CustomAlertDialog(
-    title: String,
-    message: String,
-    actionText: String,
-    showAlert: MutableState<Boolean>,
-    action: () -> Unit
-) {
-    Dialog(
-        onDismissRequest = { showAlert.value = false },
-        properties = DialogProperties(usePlatformDefaultWidth = false)
-    ) {
-        CustomAlert(
-            title, message, actionText, null, showAlert,
-            actionWithValue = null, action = action
-        )
     }
 }

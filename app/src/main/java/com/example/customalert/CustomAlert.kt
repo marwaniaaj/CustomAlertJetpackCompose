@@ -17,7 +17,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -70,11 +69,7 @@ fun <T> CustomAlert(
             Card(
                 modifier = Modifier
                     .padding(8.dp),
-                shape = RoundedCornerShape(35.dp),
-                colors = CardDefaults.cardColors(
-                    containerColor = MaterialTheme.colorScheme.background,
-                    contentColor = MaterialTheme.colorScheme.secondary
-                )
+                shape = RoundedCornerShape(35.dp)
             ) {
                 Column(
                     modifier = Modifier
@@ -122,11 +117,8 @@ fun <T> CustomAlert(
                                 )
                                 .height(55.dp)
                                 .weight(1f),
-                            shape = RoundedCornerShape(0.dp),
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = Color.Transparent,
-                                contentColor = Color.White,
-                                disabledContainerColor = Color.Transparent,
+                                containerColor = Color.Transparent
                             ),
                         ) {
                             Text(
@@ -156,11 +148,8 @@ fun <T> CustomAlert(
                                 )
                                 .height(55.dp)
                                 .weight(1f),
-                            shape = RoundedCornerShape(0.dp),
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = Color.Transparent,
-                                contentColor = Color.White,
-                                disabledContainerColor = Color.Transparent,
+                                containerColor = Color.Transparent
                             ),
                         ) {
                             Text(

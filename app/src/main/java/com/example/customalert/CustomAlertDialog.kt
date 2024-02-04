@@ -11,7 +11,7 @@ fun <T> CustomAlertDialog(
     title: String,
     message: String,
     actionText: String,
-    presenting: T?,
+    data: T?,
     showAlert: MutableState<Boolean>,
     action: (T) -> Unit
 ) {
@@ -20,7 +20,7 @@ fun <T> CustomAlertDialog(
         properties = DialogProperties(usePlatformDefaultWidth = false)
     ) {
         CustomAlert(
-            title, message, actionText, presenting, showAlert,
+            title, message, actionText, data, showAlert,
             actionWithValue = action, action = null
         )
     }

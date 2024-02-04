@@ -38,7 +38,7 @@ import com.example.customalert.ui.theme.AlertCyan
 fun <T> CustomAlert(
     title: String, message: String,
     actionText: String,
-    presenting: T?,
+    data: T?,
     showAlert: MutableState<Boolean>,
     actionWithValue: ((T) -> Unit)?,
     action: (() -> Unit)?,
@@ -142,8 +142,8 @@ fun <T> CustomAlert(
                                 animationState.targetState = false
 
                                 if (actionWithValue != null) {
-                                    presenting?.let {
-                                        actionWithValue(presenting)
+                                    data?.let {
+                                        actionWithValue(data)
                                     }
                                 } else if (action != null) {
                                     action()

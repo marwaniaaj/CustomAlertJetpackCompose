@@ -6,4 +6,4 @@
 
 
 ### Medium Article:
-[Custom Alert in Jetpack Compose]()
+[Custom Alert in Jetpack Compose](https://medium.com/@marwa.diab/custom-alert-in-jetpack-compose-47c367879147)
